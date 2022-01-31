@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+    font-family: sans-serif;
+    background: #d5f0f3;
+}
+
+h1 {
+    text-align: center;
+    /*ketebalan font*/
+    font-weight: 300;
+}
+
+.tulisan_login {
+    text-align: center;
+    /*membuat semua huruf menjadi kapital*/
+    text-transform: uppercase;
+}
+
+.kotak_login {
+    width: 350px;
+    background: white;
+    /*meletakkan form ke tengah*/
+    margin: 80px auto;
+    padding: 30px 20px;
+}
+
+label {
+    font-size: 11pt;
+}
+
+.form_login {
+    /*membuat lebar form penuh*/
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 11pt;
+    margin-bottom: 20px;
+}
+
+.tombol_login {
+    background: #46de4b;
+    color: white;
+    font-size: 11pt;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+.link {
+    color: #232323;
+    text-decoration: none;
+    font-size: 10pt;
+}
+    </style>
+</head>
+<body>
+    <div class="kotak_login">
+        <p class="tulisan_login">Silahkan login</p>
+
+
+        <form id="form_id" method="post" name="myform"></form>
+        <label>Username</label>
+        <input type="text" name="username" class="form_login" id="name" placeholder="Username atau email ..">
+
+        <label>Password</label>
+        <input type="number" name="password" class="form_login" id="password" placeholder="Password ..">
+
+
+        <input type="button" value="Login" id="submit" onclick="validate()" />
+
+        <br/>
+        <br/>
+        <center>
+            <a class="link" href="index.html">kembali</a>
+        </center>
+        </form>
+
+    </div>
+
+    <script>
+    function validate() {
+        var username = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+    
+        switch ([username, password].join(',')) {
+            case ("deki.kunnn,1234"):
+                alert("Login successfully sebagai ardi");
+                window.location = "index.html"; // Redirecting to other page.
+                break;
+            case ("unsada,1234"):
+                alert("Login successfully sebagai afri");
+                window.location = "index.html"; // Redirecting to other page.
+                break;
+            case ("kepolu,1234"):
+                alert("Login successfully sebagai bayu");
+                window.location = "index.html"; // Redirecting to other page.
+                break;
+            case ("hahaha,1234"):
+                alert("Login successfully yuda");
+                window.location = "index.html"; // Redirecting to other page.
+                break;
+    
+            default:
+                alert("Login Failed");
+                return false;
+        }
+    
+        // if (username == "deki.kunnn" && password == "1234") {
+        //     alert("Login successfully");
+        //     window.location = "success.html"; // Redirecting to other page.
+        //     return false;
+        // } else {
+        //     alert("Login Failed");
+        //     return false;
+    
+        // }
+    
+    
+    }
+</script>
+</body>
+</html>
